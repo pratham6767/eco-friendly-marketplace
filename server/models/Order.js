@@ -1,13 +1,30 @@
-const express = require("express")
-const router = express.Router()
+// models/Order.js
+const mongoose = require("mongoose");
 
-// Import the Controllers
+const orderSchema = new mongoose.Schema({
+  // farmer: { type: mongoose.Schema.Types.ObjectId, ref: 'Farmer', required: true },
 
-// Course Controllers Import
-const {createOrder} = require("../controllers/Order");
-const{auth}=require("../middlewares/Auth");
+  customer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
+  products:
+    {
+        type:Array,
+        required: true,
+    },
 
+  orderTotal: { type: Number, required: true },
 
-router.post("/create-order",auth,createOrder);
-module.exports = router
+  status: {
+    type: String,
+    enum: ["Pending", "Confirmed", "Shipped", "Delivered", "Cancelled"],
+    default: "Pending",
+  },
 
+  orderDate: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now },
+});
+
+module.exports = mongoose.model("Order", orderSchema);
