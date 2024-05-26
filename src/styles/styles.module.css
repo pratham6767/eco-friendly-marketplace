@@ -1,0 +1,114 @@
+/* Remove the global body background image */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Background image class */
+.background-image {
+  background: url('../assets/pexels-designstrive-1334312.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Container */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label */
+.label {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Input */
+.input {
+  padding: 12px;
+  margin-bottom: 20px; /* Increase margin for better separation */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.1);
+}
+
+/* Select */
+.select {
+  padding: 12px;
+  margin-bottom: 20px; /* Increase margin for better separation */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.select:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.1);
+}
+
+/* Button */
+.btn {
+  padding: 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+/* Add some spacing between elements */
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Increase margin for better separation */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}

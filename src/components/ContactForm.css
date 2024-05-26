@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  /* background: url('../public/farmer.jpg') center/cover no-repeat; */
+  background-color: #4CAF50;
+
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  overflow: hidden;
+ 
+}
+
+
+.img1{
+  position: absolute;
+  top: 10px;
+
+  width: 400px;
+  height: 400px;
+  right: 50px;
+  /* Adjust the size as needed */
+
+}
+.img2{
+  position: absolute;
+  bottom: 50px;
+  right: 7px;
+  width: 400px;
+  height: 350px;
+  left: 40px;
+  outline: none;
+  border: none;
+  /* Adjust the size as needed */
+
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.contact-form-container { 
+
+   width: 500px;
+   height:500px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.6);
+    /* position: relative; */
+    overflow: hidden;
+
+}
+
+.contact-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  background-color: rgba(255, 255, 255, 0.6); /* Adjust transparency */
+}
+
+input:focus, textarea:focus {
+  border-color: #28a745; /* Green border on focus */
+}
+
+textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.error-input {
+  border-color: red;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.success-message {
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
